@@ -2,7 +2,9 @@
 
 def no_c(my_string):
     tmp = my_string
+    result = []
+
     for i in tmp:
-        if tmp[i].lower() == 'c':
-            del tmp[i]
-    return my_string
+        if not i.lower() == 'c':
+            result.append(i)
+    return ''.join(result)
