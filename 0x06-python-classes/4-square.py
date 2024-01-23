@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" define sqr class"""
+
 
 class Square:
     """Square me good sir
