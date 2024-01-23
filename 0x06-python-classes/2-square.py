@@ -6,19 +6,17 @@
 class Square:
     """ Square class with init size
     Attributes:
-        __size (int): size ... maybe ?
+        __size (int): size maybe ?
     """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ init the square
         Args:
-            size (int): size ... probably
+            size (int): size most probably
         """
 
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        else:
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = size
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
