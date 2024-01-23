@@ -6,12 +6,12 @@ class Square:
         __size (int): size probably
     """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ def size
         Args:
             size (int): size probably
         """
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -34,4 +34,4 @@ class Square:
 
     def area(self):
         """ return area of Sqr"""
-        return self.__size**2
+        return self.size**2
