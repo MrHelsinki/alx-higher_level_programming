@@ -8,4 +8,7 @@ class TestBase(unittest.TestCase):
         case_one = Base()
         case_two = Base()
         self.assertEqual(case_one.id, case_two.id - 1)
-    
+
+
+if __name__ == "__main__":
+    unittest.main()
