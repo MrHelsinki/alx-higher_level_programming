@@ -1,7 +1,2 @@
-/*
-SQL SCRIPT TO LIST ALL DATABASES
-*/
-
-
-/*list all databases command*/
+-- script to show databases
 SHOW DATABASES;
