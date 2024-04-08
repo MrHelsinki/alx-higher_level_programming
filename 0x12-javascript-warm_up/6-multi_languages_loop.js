@@ -1,5 +1,4 @@
-const arr = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-
-for (const i of arr) {
-  console.log(i);
+#!/usr/bin/node
+for (const line of ['C is fun', 'Python is cool', 'JavaScript is amazing']) {
+  console.log(line);
 }
