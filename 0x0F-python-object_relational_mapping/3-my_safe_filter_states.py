@@ -12,7 +12,8 @@ if __name__ == "__main__":
     passwd = argv[2]
     db = argv[3]
     argument = argv[4]
-
+    if len(argument) < 10:
+        exit(-1)
 
     my_db = MySQLdb.connect(host="localhost",
                             user=user,
