@@ -12,8 +12,6 @@ if __name__ == "__main__":
     passwd = argv[2]
     db = argv[3]
     argument = argv[4]
-    if len(argument) < 10:
-        exit(-1)
 
     my_db = MySQLdb.connect(host="localhost",
                             user=user,
@@ -21,7 +19,8 @@ if __name__ == "__main__":
                             db=db,
                             port=3306)
     cur = my_db.cursor()
-    cur.execute("SELECT * FROM states WHERE NAME LIKE BINARY '%{}%'"
+    cur.execute("SELECT * FROM states WHERE NAME LIKE BINARY %s",
+                ('%' + argument + '%', )
                 .format(argument))
 
     rows = cur.fetchall()
