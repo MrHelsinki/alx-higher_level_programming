@@ -19,9 +19,7 @@ if __name__ == "__main__":
                             db=db,
                             port=3306)
     cur = my_db.cursor()
-    cur.execute("SELECT * FROM states WHERE NAME LIKE BINARY %s",
-                (argument, )
-                .format(argument))
+    cur.execute("SELECT * FROM states WHERE NAME LIKE BINARY %s", (argument, ))
 
     rows = cur.fetchall()
     for i in rows:
